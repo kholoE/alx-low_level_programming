@@ -2,6 +2,7 @@
 
 /**
  * print_square - entry point
+ *
  * Description: Prints square
  *@size: size of square
  * Return: void
@@ -27,3 +28,4 @@ void print_square(int size)
 		}
 	}
 }
+
