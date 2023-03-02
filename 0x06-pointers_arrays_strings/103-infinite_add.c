@@ -1,14 +1,13 @@
 #include "main.h"
-
 /**
  * infinite_add - adds two numbers
  * @n1: first number
  * @n2: second number
  * @r: buffer for result
  * @size_r: buffer size
+ *
  * Return: address of r or 0
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 int i, j, k, l, m, n;
@@ -36,4 +35,11 @@ r[k] = n % 10 + '0';
 r[k] = '\0';
 if (i >= 0 || j >= 0 || m)
 return (0);
+for (k -= 1, l = 0; l < k; k--, l++)
+{
+m = r[k];
+r[k] = r[l];
+r[l] = m;
+}
+return (r);
 }
